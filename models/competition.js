@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
   class Competition extends Model {
     
     static associate(models) {
-      // define association here
+      models.Competition.hasMany(models.Match);
     }
   };
   Competition.init({
@@ -15,7 +15,9 @@ module.exports = (sequelize, DataTypes) => {
     endDate: DataTypes.DATE,
     type: DataTypes.STRING,
     format: DataTypes.STRING,
-    numberOfTeams: DataTypes.INTEGER
+    numberOfTeams: DataTypes.INTEGER,
+    createdAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE
   }, {
     sequelize,
     modelName: 'Competition',

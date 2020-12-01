@@ -10,7 +10,9 @@ module.exports = {
       endDate: new Date(2020, 11, 30),
       type: 'Fotbal',
       format: 'Single elimination',
-      numberOfTeams: 8
+      numberOfTeams: 8,
+      createdAt: new Date(),
+      updatedAt: new Date()
     });
 
     competitionsArray.push({
@@ -19,7 +21,9 @@ module.exports = {
       endDate: new Date(2021, 10, 28),
       type: 'Tenis',
       format: 'Single elimination',
-      numberOfTeams: 8
+      numberOfTeams: 8,
+      createdAt: new Date(),
+      updatedAt: new Date()
     });
 
     competitionsArray.push({
@@ -28,7 +32,9 @@ module.exports = {
       endDate: new Date(2020, 12, 19),
       type: 'Gaming',
       format: 'Round Robin',
-      numberOfTeams: 4
+      numberOfTeams: 4, 
+      createdAt: new Date(),
+      updatedAt: new Date()
     });
 
     await queryInterface.bulkInsert('Competitions', competitionsArray, {});

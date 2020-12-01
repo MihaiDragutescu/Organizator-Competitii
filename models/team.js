@@ -6,15 +6,19 @@ module.exports = (sequelize, DataTypes) => {
   class Team extends Model {
 
     static associate(models) {
-      //models.Team.hasMany(models.Match,{as: 'teamId1'});
-      //models.Team.hasMany(models.Match,{as: 'teamId2'});
-      models.Team.hasOne(models.Member,{foreignKey: 'captainId'});
-      //models.Team.hasMany(models.Member,{as: 'teamId'});
+      
+      models.Team.belongsToMany(models.Match,{
+        through: 'TeamsMatches'
+      });
+      models.Team.hasMany(models.Member);
+    
     }
   };
   Team.init({
     teamName: DataTypes.STRING,
-    numberOfMembers: DataTypes.INTEGER
+    numberOfMembers: DataTypes.INTEGER,
+    createdAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE
   }, {
     sequelize,
     modelName: 'Team',

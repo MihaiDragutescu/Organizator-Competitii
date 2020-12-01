@@ -6,41 +6,32 @@ module.exports = {
     const matchesArray = new Array();
 
     for (var i = 0; i < 4; i++) {
-      var team1 = i * 2 + 1;
-      var team2 = i * 2 + 2;
 
       matchesArray.push({
-        competitionId: 1,
         dateOfMatch: faker.date.past(),
-        idTeam1: team1,
-        idTeam2: team2,
-        score: '2:1'
+        score: '2:1',
+        createdAt: new Date(),
+        updatedAt: new Date()
       });
     }
 
     for (var i = 0; i < 4; i++) {
-      var team1 = i * 2 + 9;
-      var team2 = i * 2 + 10;
 
       matchesArray.push({
-        competitionId: 2,
         dateOfMatch: faker.date.past(),
-        idTeam1: team1,
-        idTeam2: team2,
-        score: '1:3'
+        score: '1:3',
+        createdAt: new Date(),
+        updatedAt: new Date()
       });
     }
 
     for (var i = 0; i < 2; i++) {
-      var team1 = i * 2 + 17;
-      var team2 = i * 2 + 18;
 
       matchesArray.push({
-        competitionId: 3,
         dateOfMatch: faker.date.past(),
-        idTeam1: team1,
-        idTeam2: team2,
-        score: '3:2'
+        score: '3:2',
+        createdAt: new Date(),
+        updatedAt: new Date()
       });
     }
 

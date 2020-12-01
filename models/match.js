@@ -8,11 +8,17 @@ module.exports = (sequelize, DataTypes) => {
 
     static associate(models) {
       models.Match.belongsTo(models.Competition);
+      models.Match.belongsToMany(models.Team,{
+        through: 'TeamsMatches'
+      });
     }
   };
   Match.init({
     dateOfMatch: DataTypes.DATE,
-    score: DataTypes.STRING
+    competitionId: DataTypes.INTEGER,
+    score: DataTypes.STRING,
+    createdAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE
   }, {
     sequelize,
     modelName: 'Match',

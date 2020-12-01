@@ -15,9 +15,23 @@ module.exports = {
         type: Sequelize.STRING
       },
       teamId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: {
+            tableName: 'Teams',
+          },
+          key: 'id',
+        }
       },
       dateOfBirth: {
+        type: Sequelize.DATE
+      },
+      createdAt: {
+        allowNull: false,
+        type: Sequelize.DATE
+      },
+      updatedAt: {
+        allowNull: false,
         type: Sequelize.DATE
       }
     });

@@ -9,7 +9,9 @@ module.exports = {
       lastName: faker.name.lastName(),
       email: faker.internet.email(),
       password: faker.internet.password(),
-      admin: false
+      admin: false,
+      createdAt: new Date(),
+      updatedAt: new Date()
     }));
     usersArray[5].admin=true;
     await queryInterface.bulkInsert('Users', usersArray, {});

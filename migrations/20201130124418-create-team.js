@@ -11,11 +11,16 @@ module.exports = {
       teamName: {
         type: Sequelize.STRING
       },
-      captainId: {
-        type: Sequelize.INTEGER
-      },
       numberOfMembers: {
         type: Sequelize.INTEGER
+      },
+      createdAt: {
+        allowNull: false,
+        type: Sequelize.DATE
+      },
+      updatedAt: {
+        allowNull: false,
+        type: Sequelize.DATE
       }
     });
   },

@@ -18,11 +18,12 @@ module.exports = (sequelize, DataTypes) => {
     lastName: DataTypes.STRING,
     email: DataTypes.STRING,
     password: DataTypes.STRING,
-    admin: DataTypes.BOOLEAN
+    admin: DataTypes.BOOLEAN,
+    createdAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE
   }, {
     sequelize,
-    modelName: 'User',
-    timestamps: false,
+    modelName: 'User'
   });
   return User;
 };
