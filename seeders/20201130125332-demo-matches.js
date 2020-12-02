@@ -9,6 +9,7 @@ module.exports = {
 
       matchesArray.push({
         dateOfMatch: faker.date.past(),
+        competitionId: 1,
         score: '2:1',
         createdAt: new Date(),
         updatedAt: new Date()
@@ -19,6 +20,7 @@ module.exports = {
 
       matchesArray.push({
         dateOfMatch: faker.date.past(),
+        competitionId: 2,
         score: '1:3',
         createdAt: new Date(),
         updatedAt: new Date()
@@ -29,6 +31,7 @@ module.exports = {
 
       matchesArray.push({
         dateOfMatch: faker.date.past(),
+        competitionId: 3,
         score: '3:2',
         createdAt: new Date(),
         updatedAt: new Date()

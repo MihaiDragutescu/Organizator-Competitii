@@ -9,7 +9,9 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       models.Match.belongsTo(models.Competition);
       models.Match.belongsToMany(models.Team,{
-        through: 'TeamsMatches'
+        through: 'TeamsMatches',
+        as: 'teams',
+        foreignKey: 'matchId'
       });
     }
   };

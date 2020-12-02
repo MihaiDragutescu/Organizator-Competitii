@@ -26,6 +26,9 @@ module.exports = {
       dateOfBirth: {
         type: Sequelize.DATE
       },
+      teamCaptain:{
+        type: Sequelize.BOOLEAN
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

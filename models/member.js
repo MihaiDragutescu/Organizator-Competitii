@@ -18,6 +18,7 @@ module.exports = (sequelize, DataTypes) => {
     lastName: DataTypes.STRING,
     teamId: DataTypes.INTEGER,
     dateOfBirth: DataTypes.DATE,
+    teamCaptain: DataTypes.BOOLEAN,
     createdAt: DataTypes.DATE,
     updatedAt: DataTypes.DATE
   }, {

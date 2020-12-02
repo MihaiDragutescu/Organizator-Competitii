@@ -8,7 +8,9 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       
       models.Team.belongsToMany(models.Match,{
-        through: 'TeamsMatches'
+        through: 'TeamsMatches',
+        as: 'matches',
+        foreignKey: 'teamId'
       });
       models.Team.hasMany(models.Member);
     
