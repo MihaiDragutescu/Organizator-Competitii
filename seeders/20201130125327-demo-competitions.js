@@ -32,7 +32,7 @@ module.exports = {
       endDate: new Date(2020, 12, 19),
       type: 'Gaming',
       format: 'Round Robin',
-      numberOfTeams: 4, 
+      numberOfTeams: 4,
       createdAt: new Date(),
       updatedAt: new Date()
     });

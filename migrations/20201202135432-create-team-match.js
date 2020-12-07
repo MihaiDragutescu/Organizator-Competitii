@@ -9,10 +9,22 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       teamId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: {
+            tableName: 'Teams',
+          },
+          key: 'id',
+        },
       },
       matchId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: {
+            tableName: 'Matches',
+          },
+          key: 'id',
+        },
       },
       createdAt: {
         allowNull: false,

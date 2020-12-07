@@ -4,7 +4,7 @@ const {
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Competition extends Model {
-    
+
     static associate(models) {
       models.Competition.hasMany(models.Match);
     }

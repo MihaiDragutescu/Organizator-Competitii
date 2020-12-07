@@ -12,6 +12,7 @@ module.exports = {
         type: Sequelize.DATE
       },
       competitionId: {
+        allowNull: true,
         type: Sequelize.INTEGER,
         references: {
           model: {

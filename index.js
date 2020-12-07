@@ -18,6 +18,6 @@ app.use('/graphql', authenticationMiddleware, graphqlHTTP({
   rootValue: resolver,
 }));
 
-app.listen(port, function() {
+app.listen(port, function () {
   console.log('server started');
 });

@@ -13,7 +13,8 @@ module.exports = {
       createdAt: new Date(),
       updatedAt: new Date()
     }));
-    usersArray[5].admin=true;
+    
+    usersArray[5].admin = true;
     await queryInterface.bulkInsert('Users', usersArray, {});
   },
 

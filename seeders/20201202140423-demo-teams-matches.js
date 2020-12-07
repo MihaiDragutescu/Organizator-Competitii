@@ -1,20 +1,22 @@
 'use strict';
+const models = require('../models');
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
+    const teamsQuery = await models.Team.findAll();
+    const matchesQuery = await models.Match.findAll();
     const teamsMatchesArray = new Array();
-    
+
     for (var i = 0; i < 20; i++) {
-      var team=i+1;
-      var match=Math.floor(i/2)+1;
+      var index = Math.floor(i / 2);
       teamsMatchesArray.push({
-        teamId:team,
-        matchId:match,
+        teamId: teamsQuery[i].id,
+        matchId: matchesQuery[index].id,
         createdAt: new Date(),
         updatedAt: new Date()
       });
     }
-   await queryInterface.bulkInsert('TeamMatches', teamsMatchesArray, {});
+    await queryInterface.bulkInsert('TeamMatches', teamsMatchesArray, {});
   },
 
   down: async (queryInterface, Sequelize) => {

@@ -21,12 +21,12 @@ module.exports = {
             tableName: 'Teams',
           },
           key: 'id',
-        }
+        },
       },
       dateOfBirth: {
         type: Sequelize.DATE
       },
-      teamCaptain:{
+      teamCaptain: {
         type: Sequelize.BOOLEAN
       },
       createdAt: {

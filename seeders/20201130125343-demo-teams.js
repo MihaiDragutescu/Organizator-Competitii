@@ -1,5 +1,4 @@
 'use strict';
-//const models = require('../models');
 const faker = require('faker');
 
 module.exports = {
@@ -7,13 +6,10 @@ module.exports = {
 
     const teamsArray = new Array();
 
-    //const matches = await models.Match.findAll();
-
     for (var i = 0; i < 8; i++)
       teamsArray.push({
         teamName: faker.address.city(),
         numberOfMembers: 11,
-        //matches: matches,
         createdAt: new Date(),
         updatedAt: new Date()
       });
@@ -22,7 +18,6 @@ module.exports = {
       teamsArray.push({
         teamName: faker.address.country(),
         numberOfMembers: 2,
-        //matches: matches,
         createdAt: new Date(),
         updatedAt: new Date()
       });
@@ -31,7 +26,6 @@ module.exports = {
       teamsArray.push({
         teamName: "",
         numberOfMembers: 4,
-        //matches: matches,
         createdAt: new Date(),
         updatedAt: new Date()
       });

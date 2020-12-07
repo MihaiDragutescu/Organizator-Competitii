@@ -6,14 +6,13 @@ module.exports = (sequelize, DataTypes) => {
   class Team extends Model {
 
     static associate(models) {
-      
-      models.Team.belongsToMany(models.Match,{
-        through: 'TeamsMatches',
+      models.Team.belongsToMany(models.Match, {
+        through: 'TeamMatches',
         as: 'matches',
         foreignKey: 'teamId'
       });
+      
       models.Team.hasMany(models.Member);
-    
     }
   };
   Team.init({
