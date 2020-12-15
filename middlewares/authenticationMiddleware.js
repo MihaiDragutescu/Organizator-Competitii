@@ -1,15 +1,18 @@
 const jwt = require('jsonwebtoken');
 const config = require('../config/config1');
+const models = require('../models');
 
 const authenticationMiddleware = (req, res, next) => {
     const token = req.headers.authorization ? req.headers.authorization.replace('Bearer ', '') : null;
 
     jwt.verify(token, config.JWTSECRET, (err, data) => {
         if (err) {
-            res.status(401).send({
-                status: "You are not allowed here!"
-            });
+            next();
         } else {
+            const user = models.User.findByPk(parseInt(data.userId));
+            // Daca tokenul este valid, punem modelul User pe obiectul request (req).
+            // Acesta va fi disponibil in context din graphql.
+            req.user = user;
             next()
         }
     });

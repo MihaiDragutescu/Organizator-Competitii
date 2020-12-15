@@ -19,7 +19,6 @@ module.exports = (sequelize, DataTypes) => {
     dateOfMatch: DataTypes.DATE,
     competitionId: {
       type: DataTypes.INTEGER,
-      allowNull: false,
       references: {
         model: 'Competition',
         key: 'id'

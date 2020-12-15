@@ -14,7 +14,6 @@ module.exports = (sequelize, DataTypes) => {
     lastName: DataTypes.STRING,
     teamId: {
       type: DataTypes.INTEGER,
-      allowNull: false,
       references: {
         model: 'Team',
         key: 'id'
