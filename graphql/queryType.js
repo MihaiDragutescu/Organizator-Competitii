@@ -21,7 +21,7 @@ const queryType = new GraphQLObjectType({
             type: new GraphQLList(userType),
             args: {
             },
-            resolve: async (_, { }) => {
+            resolve: async () => {
                 const users = await models.User.findAll();
                 return users;
             }
@@ -42,7 +42,7 @@ const queryType = new GraphQLObjectType({
             type: new GraphQLList(competitionType),
             args: {
             },
-            resolve: async (_, { }) => {
+            resolve: async () => {
                 const competitions = await models.Competition.findAll();
                 return competitions;
             }
@@ -63,7 +63,7 @@ const queryType = new GraphQLObjectType({
             type: new GraphQLList(teamType),
             args: {
             },
-            resolve: async (_, { }) => {
+            resolve: async () => {
                 const teams = await models.Team.findAll();
                 return teams;
             }
@@ -84,7 +84,7 @@ const queryType = new GraphQLObjectType({
             type: new GraphQLList(memberType),
             args: {
             },
-            resolve: async (_, { }) => {
+            resolve: async () => {
                 const members = await models.Member.findAll();
                 return members;
             }
@@ -105,7 +105,7 @@ const queryType = new GraphQLObjectType({
             type: new GraphQLList(matchType),
             args: {
             },
-            resolve: async (_, { }) => {
+            resolve: async () => {
                 const matches = await models.Match.findAll();
                 return matches;
             }
