@@ -24,7 +24,7 @@ module.exports = {
         },
       },
       dateOfBirth: {
-        type: Sequelize.DATE
+        type: Sequelize.STRING
       },
       teamCaptain: {
         type: Sequelize.BOOLEAN

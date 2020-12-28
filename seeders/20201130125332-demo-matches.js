@@ -10,7 +10,7 @@ module.exports = {
     for (var i = 0; i < 4; i++) {
 
       matchesArray.push({
-        dateOfMatch: faker.date.past(),
+        dateOfMatch: faker.date.past().toString(),
         competitionId: competitionsQuery[0].id,
         score: '2:1',
         createdAt: new Date(),
@@ -21,7 +21,7 @@ module.exports = {
     for (var i = 0; i < 4; i++) {
 
       matchesArray.push({
-        dateOfMatch: faker.date.past(),
+        dateOfMatch: faker.date.past().toString(),
         competitionId: competitionsQuery[1].id,
         score: '1:3',
         createdAt: new Date(),
@@ -32,7 +32,7 @@ module.exports = {
     for (var i = 0; i < 2; i++) {
 
       matchesArray.push({
-        dateOfMatch: faker.date.past(),
+        dateOfMatch: faker.date.past().toString(),
         competitionId: competitionsQuery[2].id,
         score: '3:2',
         createdAt: new Date(),

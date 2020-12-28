@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Match.init({
-    dateOfMatch: DataTypes.DATE,
+    dateOfMatch: DataTypes.STRING,
     competitionId: {
       type: DataTypes.INTEGER,
       references: {

@@ -11,8 +11,8 @@ module.exports = (sequelize, DataTypes) => {
   };
   Competition.init({
     competitionName: DataTypes.STRING,
-    startDate: DataTypes.DATE,
-    endDate: DataTypes.DATE,
+    startDate: DataTypes.STRING,
+    endDate: DataTypes.STRING,
     type: DataTypes.STRING,
     format: DataTypes.STRING,
     numberOfTeams: DataTypes.INTEGER,

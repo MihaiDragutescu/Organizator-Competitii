@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const config = require('../config/config1');
+const config = require('../config/appConfig');
 const models = require('../models');
 
 const authenticationMiddleware = (req, res, next) => {

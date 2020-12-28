@@ -9,7 +9,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       dateOfMatch: {
-        type: Sequelize.DATE
+        type: Sequelize.STRING
       },
       competitionId: {
         allowNull: true,

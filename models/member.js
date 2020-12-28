@@ -4,7 +4,7 @@ const {
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Member extends Model {
- 
+
     static associate(models) {
       models.Member.belongsTo(models.Team);
     }
@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
         key: 'id'
       }
     },
-    dateOfBirth: DataTypes.DATE,
+    dateOfBirth: DataTypes.STRING,
     teamCaptain: DataTypes.BOOLEAN,
     createdAt: DataTypes.DATE,
     updatedAt: DataTypes.DATE

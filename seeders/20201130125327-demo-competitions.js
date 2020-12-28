@@ -6,8 +6,8 @@ module.exports = {
 
     competitionsArray.push({
       competitionName: 'Fotbal pe sate',
-      startDate: new Date(2020, 11, 20),
-      endDate: new Date(2020, 11, 30),
+      startDate: new Date(2020, 11, 20).toString(),
+      endDate: new Date(2020, 11, 30).toString(),
       type: 'Fotbal',
       format: 'Single elimination',
       numberOfTeams: 8,
@@ -17,8 +17,8 @@ module.exports = {
 
     competitionsArray.push({
       competitionName: 'Campionat tenis la dublu',
-      startDate: new Date(2021, 10, 12),
-      endDate: new Date(2021, 10, 28),
+      startDate: new Date(2021, 10, 12).toString(),
+      endDate: new Date(2021, 10, 28).toString(),
       type: 'Tenis',
       format: 'Single elimination',
       numberOfTeams: 8,
@@ -28,8 +28,8 @@ module.exports = {
 
     competitionsArray.push({
       competitionName: 'Turneu Dota 2',
-      startDate: new Date(2020, 12, 11),
-      endDate: new Date(2020, 12, 19),
+      startDate: new Date(2020, 12, 11).toString(),
+      endDate: new Date(2020, 12, 19).toString(),
       type: 'Gaming',
       format: 'Round Robin',
       numberOfTeams: 4,

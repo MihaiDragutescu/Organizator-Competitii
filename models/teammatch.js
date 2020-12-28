@@ -4,15 +4,15 @@ const {
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class TeamMatch extends Model {
-   
+
     static associate(models) {
-      
+
     }
   };
   TeamMatch.init({
     teamId: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
       references: {
         model: 'Team',
         key: 'id'
@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     matchId: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
       references: {
         model: 'Match',
         key: 'id'

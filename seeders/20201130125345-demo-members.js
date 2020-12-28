@@ -14,7 +14,7 @@ module.exports = {
         firstName: faker.name.firstName(),
         lastName: faker.name.lastName(),
         teamId: teamsQuery[index].id,
-        dateOfBirth: faker.date.past(),
+        dateOfBirth: faker.date.past().toString(),
         teamCaptain: captain,
         createdAt: new Date(),
         updatedAt: new Date()
@@ -28,7 +28,7 @@ module.exports = {
         firstName: faker.name.firstName(),
         lastName: faker.name.lastName(),
         teamId: teamsQuery[index].id,
-        dateOfBirth: faker.date.past(),
+        dateOfBirth: faker.date.past().toString(),
         teamCaptain: captain,
         createdAt: new Date(),
         updatedAt: new Date()
@@ -42,7 +42,7 @@ module.exports = {
         firstName: faker.name.firstName(),
         lastName: faker.name.lastName(),
         teamId: teamsQuery[index].id,
-        dateOfBirth: faker.date.past(),
+        dateOfBirth: faker.date.past().toString(),
         teamCaptain: captain,
         createdAt: new Date(),
         updatedAt: new Date()
